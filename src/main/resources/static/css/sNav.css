@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(245,245,245);
+}
+
+.body_div{
+	margin: 20px auto;
+	height:auto;
+	width: 1059px;
+}
+
+.sNav {
+	height: 60px;
+	width: 100%;
+}
+
+.sNav>a {
+	font-size: 20px;
+	list-style: none;
+	float: left;
+	text-decoration: none;
+	position: relative;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.sNav>a li {
+	background: rgb(139,137,137);
+	padding: 0px 30px;
+	text-align: center;
+	color: white;
+	height: 60px;
+	line-height: 60px;
+}
+
+.sNav>a span {
+	background:rgb(	54,54,54);
+	text-align: center;
+	color: white;
+}
