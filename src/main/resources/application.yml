@@ -1,3 +1,7 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
 spring:
     thymeleaf:
      cache: false
@@ -7,7 +11,10 @@ spring:
      content-type: text/html
      mode: HTML5
     mvc:
-      static-path-pattern: /static/*
+      static-path-pattern: /** 
+    resources:
+      static-locations:
+        - classpath:/static/
     datasource:
         name: advertisement 
         url: jdbc:mysql://127.0.0.1:3306/advertisement?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
@@ -16,21 +23,14 @@ spring:
         #使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        filters: stat
-        maxActive: 20
-        initialSize: 1
-        maxWait: 60000
-        minIdle: 1
-        timeBetweenEvictionRunsMillis: 60000
-        minEvictableIdleTimeMillis: 300000
-        validationQuery: select 'x'
-        testWhileIdle: true
-        testOnBorrow: false
-        testOnReturn: false
-        poolPreparedStatements: true
-        maxOpenPreparedStatements: 20    
-   
-
+        tomcat:
+          initial-size: 20
+          max-active: 100
+          max-idle: 5
+          max-wait: 10000
+          min-idle: 1
+          test-on-borrow: true
+          validation-query: SELECT 1
           
 mybatis: 
   mapperLocations: classpath:com/it/advertisement/mapper/*.xml

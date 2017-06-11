@@ -29,6 +29,6 @@ public class UserController {
 //		        System.out.println("插入用户信息"+user.getUserName());  
 //		        String hello = user.getUserName();
 //		        request.setAttribute("hello", hello);
-		        return "index";
+		        return "home/index";
 		}
 }
