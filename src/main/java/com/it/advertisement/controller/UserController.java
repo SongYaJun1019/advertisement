@@ -1,4 +1,4 @@
-package com.it.advertisement.action;
+package com.it.advertisement.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
