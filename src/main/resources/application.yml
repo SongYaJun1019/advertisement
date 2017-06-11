@@ -31,7 +31,12 @@ spring:
           min-idle: 1
           test-on-borrow: true
           validation-query: SELECT 1
-          
+
+#扫描mybatis的xml文件路径        
 mybatis: 
   mapperLocations: classpath:com/it/advertisement/mapper/*.xml
   typeAliasesPackage: com.it.advertisement.entity
+
+#配置日志
+logging:
+  config: classpath:logback.xml
